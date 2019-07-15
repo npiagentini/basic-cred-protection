@@ -1,0 +1,34 @@
+# skillet preamble information used by panhandler
+# ---------------------------------------------------------------------
+# unique snippet name
+name: basic-cred-protection
+# label used for menu selection
+label: basic-cred-protection
+description: Builds a new default URL filtering profile with basic credential protection enabled
+
+# type of device configuration
+# common types are panorama, panos, and template
+# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
+type: panos
+# preload static or default-based templates
+extends:
+
+# grouping of like snippets for dynamic menu creation in panhandler
+labels:
+  collection:
+    - profiles
+
+# ---------------------------------------------------------------------
+# end of preamble section
+
+
+# snippets section
+# ---------------------------------------------------------------------
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: cred-protection-profile
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/url-filtering
+    file: cred-protection-profile.xml
+# ---------------------------------------------------------------------
+# end of snippets section

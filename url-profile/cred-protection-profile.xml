@@ -1,0 +1,39 @@
+<entry name="default-w-user-cred">
+        <credential-enforcement>
+          <mode>
+            <ip-user/>
+          </mode>
+          <log-severity>high</log-severity>
+          <block>
+            <member>dynamic-dns</member>
+            <member>insufficient-content</member>
+            <member>not-resolved</member>
+            <member>parked</member>
+            <member>proxy-avoidance-and-anonymizers</member>
+            <member>unknown</member>
+            <member>abused-drugs</member>
+            <member>adult</member>
+            <member>command-and-control</member>
+            <member>gambling</member>
+            <member>hacking</member>
+            <member>malware</member>
+            <member>phishing</member>
+            <member>questionable</member>
+            <member>weapons</member>
+          </block>
+        </credential-enforcement>
+        <action>block</action>
+        <description>Add ID User mapping credential protection to allowed cate
+gories in the default profile</description>
+        <block>
+          <member>abused-drugs</member>
+          <member>adult</member>
+          <member>command-and-control</member>
+          <member>gambling</member>
+          <member>hacking</member>
+          <member>malware</member>
+          <member>phishing</member>
+          <member>questionable</member>
+          <member>weapons</member>
+        </block>
+</entry>
